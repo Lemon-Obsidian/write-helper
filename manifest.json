@@ -1,0 +1,10 @@
+{
+  "id": "lemon-write-helper",
+  "name": "@lemon/write-helper",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Obsidian용 글쓰기 도우미 플러그인",
+  "author": "lemon",
+  "authorUrl": "https://github.com/Lemon-Obsidian/write-helper",
+  "isDesktopOnly": false
+}
