@@ -1,1 +1,226 @@
 /* @lemon/write-helper styles */
+
+/* ── 공통 ── */
+.wh-btn {
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+}
+.wh-btn:hover { background: var(--background-modifier-hover); }
+.wh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.wh-btn-primary {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+}
+.wh-btn-primary:hover { filter: brightness(1.1); }
+.wh-btn-danger { color: var(--text-error); }
+.wh-btn-sm { padding: 2px 7px; font-size: 12px; }
+.wh-input {
+  width: 100%;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  font-size: 13px;
+  box-sizing: border-box;
+}
+.wh-input:focus { outline: none; border-color: var(--interactive-accent); }
+.wh-input-sm { width: auto; }
+.wh-textarea { min-height: 80px; resize: vertical; }
+.wh-textarea-sm { min-height: 50px; resize: vertical; }
+.wh-empty { color: var(--text-muted); font-size: 13px; padding: 8px 0; }
+.wh-required { color: var(--text-error); }
+.wh-success { color: var(--text-success, #4caf50); font-size: 14px; padding: 12px 0; }
+
+/* ── 레이아웃 ── */
+.wh-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.wh-header h4 { margin: 0; }
+.wh-modal-footer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--background-modifier-border);
+}
+.wh-form-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.wh-form-row label { min-width: 100px; font-size: 13px; color: var(--text-muted); flex-shrink: 0; }
+.wh-form-row-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.wh-form-row-col label { font-size: 13px; color: var(--text-muted); }
+.wh-checkbox-label { display: flex; align-items: center; gap: 6px; font-size: 13px; cursor: pointer; }
+.wh-section { margin-bottom: 16px; }
+.wh-section h5 { margin: 0 0 8px 0; font-size: 13px; color: var(--text-muted); }
+
+/* ── 태그 관리 ── */
+.wh-tag-manager { padding: 16px; }
+.wh-tag-list { display: flex; flex-direction: column; gap: 4px; }
+.wh-tag-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: var(--background-secondary);
+}
+.wh-tag-item:hover { background: var(--background-modifier-hover); }
+.wh-tag-name { font-size: 13px; }
+
+/* ── 템플릿 관리 ── */
+.wh-template-manager { padding: 16px; }
+.wh-template-list { display: flex; flex-direction: column; gap: 8px; }
+.wh-template-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+}
+.wh-template-name { font-size: 14px; font-weight: 500; }
+.wh-template-type { font-size: 12px; color: var(--text-muted); }
+.wh-template-actions { display: flex; gap: 6px; }
+
+/* ── 템플릿 에디터 ── */
+.wh-template-editor-modal .modal-content { max-height: 80vh; overflow-y: auto; }
+.wh-field-editor {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.wh-question-row { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.wh-question-num { min-width: 20px; color: var(--text-muted); font-size: 13px; }
+
+/* ── 폼 입력 모달 ── */
+.wh-form-modal .modal-content { max-height: 85vh; overflow-y: auto; }
+.wh-form { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.wh-field-row { display: flex; flex-direction: column; gap: 4px; }
+.wh-field-label-row { display: flex; flex-direction: column; gap: 2px; }
+.wh-field-label-row label { font-size: 13px; font-weight: 500; }
+.wh-field-desc { font-size: 12px; color: var(--text-muted); }
+.wh-field-input-area { display: flex; flex-direction: column; gap: 6px; }
+.wh-llm-row { display: flex; flex-direction: column; gap: 4px; }
+.wh-llm-row > div:first-child { display: flex; gap: 6px; }
+.wh-llm-result { padding: 4px 0; }
+.wh-preview-section {
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+.wh-preview-section h5 { margin: 0 0 8px 0; }
+.wh-preview-content { margin-bottom: 8px; }
+.wh-preview-text {
+  background: var(--background-secondary);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;
+}
+.wh-refine-row { display: flex; gap: 6px; align-items: center; margin-top: 6px; }
+.wh-refine-row .wh-input { flex: 1; }
+
+/* ── 템플릿 선택 모달 ── */
+.wh-template-select-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+}
+.wh-template-select-btn:hover { background: var(--background-modifier-hover); }
+
+/* ── LLM 채팅 모달 ── */
+.wh-chat-modal .modal-content { display: flex; flex-direction: column; height: 75vh; }
+.wh-chat-log {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px 0;
+  margin-bottom: 8px;
+}
+.wh-chat-msg { display: flex; gap: 8px; align-items: flex-start; }
+.wh-chat-assistant { flex-direction: row; }
+.wh-chat-user { flex-direction: row-reverse; }
+.wh-chat-role { font-size: 18px; flex-shrink: 0; padding-top: 2px; }
+.wh-chat-content {
+  background: var(--background-secondary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  max-width: 80%;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.wh-chat-user .wh-chat-content { background: var(--interactive-accent); color: var(--text-on-accent); }
+.wh-chat-progress { font-size: 12px; color: var(--text-muted); text-align: center; margin-bottom: 6px; }
+.wh-chat-input-area { flex-shrink: 0; }
+.wh-chat-btn-row { display: flex; gap: 6px; margin-top: 6px; justify-content: flex-end; }
+.wh-preview-large { max-height: 300px; }
+
+/* ── 파일 교정 모달 ── */
+.wh-validation-modal .modal-content { max-height: 80vh; overflow-y: auto; }
+.wh-result-list { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.wh-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  cursor: pointer;
+}
+.wh-result-item:hover { background: var(--background-modifier-hover); }
+.wh-result-path { font-size: 13px; word-break: break-all; }
+.wh-result-count { font-size: 12px; color: var(--text-error); flex-shrink: 0; margin-left: 8px; }
+.wh-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.wh-nav-count { font-size: 13px; color: var(--text-muted); }
+.wh-file-path { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; word-break: break-all; }
+.wh-issue-list { margin-bottom: 10px; }
+.wh-issue-list h6 { margin: 0 0 4px 0; font-size: 13px; }
+.wh-issue-item { font-size: 13px; color: var(--text-warning, #ff9800); padding: 2px 0; }
+.wh-editor-area { display: flex; flex-direction: column; gap: 6px; }
+.wh-editor-textarea { min-height: 200px; font-family: var(--font-monospace); font-size: 12px; }
